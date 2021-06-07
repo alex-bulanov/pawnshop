@@ -24,6 +24,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/Ubuntu-Bold.woff2") format("woff2"), url("../assets/fonts/Ubuntu-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -84,10 +92,13 @@ a {
   list-style: none;
 }
 
-.button-reset {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  appearance: none;
-  cursor: pointer;
+.holder {
+  width: 360px;
+  margin: 0 auto;
+
+  outline: 1px solid purple;
+}
+
+.wrapper {
+  padding: 0 16px;
 }

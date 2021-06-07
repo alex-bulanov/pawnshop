@@ -1,0 +1,35 @@
+@import (reference) '../../less/variables.less';
+
+.btn {
+  display: block;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 24px;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: @color-white;
+  background-color: @color-btn;
+  appearance: none;
+  cursor: pointer;
+  transition: @transition;
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @color-btn-hover;
+  }
+
+  &:active {
+    background-color: @color-btn-active;
+  }
+}

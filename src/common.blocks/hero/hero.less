@@ -1,0 +1,40 @@
+@import (reference) '../../less/variables.less';
+
+.hero {
+  position: relative;
+  min-height: 432px;
+  margin-bottom: 119px;
+
+
+  background: no-repeat url("./hero-bg.jpg") center / cover;
+  
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url('./hero-bg@2x.jpg');
+  }
+
+  &__slogan {
+    position: absolute;
+    top: 374px;
+    left: 16px;
+    max-width: 100%;
+    outline: 1px solid blue;
+  }
+  
+  &__slogan-text {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: 1px;
+  }
+
+  &__slogan-cost {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 110%;
+    letter-spacing: 1px;
+    color: @color-accent;
+  }
+}
+

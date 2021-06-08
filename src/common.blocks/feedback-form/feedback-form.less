@@ -1,0 +1,190 @@
+@import (reference) '../../less/variables.less';
+
+.feedback-form {
+
+  &__input-wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 16px;
+
+    &--message {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 14px;
+        right: 4px;
+        width: 22px;
+        height: 1px;
+        z-index: 2;
+        background-color: @color-secondary-text;
+        transform: rotate(-45deg);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+        width: 12px;
+        height: 1px;
+        z-index: 3;
+        background-color: @color-secondary-text;
+        transform: rotate(-45deg);     
+      }
+    }
+  }
+
+  &__input {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 100%;
+    height: 48px;
+    padding: 18px 24px 6px;
+    appearance: none;
+    font-family: "Ubuntu", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    color: @color-text;
+    background: @color-bg-input;
+    transition: @transition;
+
+    &--message {
+      resize: none;
+      height: 112px;
+      padding: 20px 24px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @color-btn;
+      outline: none;
+    }
+
+    &:disabled {
+      border-color: transparent;
+      background: @color-disabled;
+    }
+  }
+
+  &__input:-webkit-autofill,
+  &__input:-webkit-autofill:hover,
+  &__input:-webkit-autofill:active,
+  &__input:-webkit-autofill:focus {
+    background-color: @color-bg-input !important;
+    color: @color-text !important;
+    box-shadow: 0 0 0 1000px @color-bg-input inset !important;
+    -webkit-text-fill-color: @color-text !important;
+  }
+
+  &__input--filled {
+    border-color: @color-btn;
+  }
+
+  &__label {
+    position: absolute;
+    top: 14px;
+    left: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: @color-secondary-text;
+    transition: @transition;
+  }
+
+  &__input--message + &__label {
+    top: 20px;
+  }
+
+  &__input:focus + &__label,
+  &__input--filled + &__label {
+    top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__input--message&__input:focus + &__label,
+  &__input--message&__input--filled + &__label {
+    top: 6px;
+  }
+
+  &__input:disabled + &__label {
+    color: @color-disabled-text;
+  }
+
+  &__input--success {
+    border-color: @color-success;
+    background: @color-bg-success;
+
+    &:hover,
+    &:focus {
+      border-color: @color-success;
+    }
+  }
+
+  &__input--success + &__label {
+    color: @color-success;
+  }
+
+  &__input--error {
+    border-color: @color-error;
+    background: @color-bg-error;
+
+    &:hover,
+    &:focus {
+      border-color: @color-error;
+    }
+  }
+
+  &__input--error + &__label {
+    color: @color-error;
+  }
+
+  &__privacy {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  &__privacy-label {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    background-color: @color-btn;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.06);
+  }
+
+  &__privacy-input:checked + &__privacy-label {
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      border: 1px solid @color-white;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      width: 10px;
+      height: 5px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__privacy-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__privacy-link {
+    color: @color-btn;
+    text-decoration: underline;
+  }
+
+  &__submit {
+    width: 100%;
+  }
+}

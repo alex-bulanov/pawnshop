@@ -1,0 +1,42 @@
+@import (reference) '../../less/variables.less';
+
+.footer {
+  padding-bottom: 32px;
+
+  &__link {
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: @color-secondary-text;
+
+    &--phone {
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    &--address {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 21px;
+      border-bottom: 1px dashed;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__logo {
+    display: flex;
+    width: 208px;
+    height: 32px;
+
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

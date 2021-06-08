@@ -44,56 +44,51 @@
 
       <section class="price section">
         <div class="wrapper">
+          <div class="price__container">
+            <h2 class="price__title">Узнайте стоимость ваших украшений</h2>
 
-          <h2 class="price__title">Узнайте стоимость ваших украшений</h2>
+            <p class="price__sub-title">Укажите вес украшения:</p>
+            <div class="price__range"></div>
 
-          <div class="price__range"></div>
+            <p class="price__sub-title">Выберите пробу</p>
 
-          <div class="price__wrapper">
-
-            <ul class="price__samples-list samples-list list-reset">
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-375">
-                <label class="samples-list__label" for="sample-375">375</label>
+            <ul class="price__samples-list list-reset">
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="375" name="price" id="sample-375">
+                <label class="price__label" for="sample-375">375</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-500">
-                <label class="samples-list__label" for="sample-500">500</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="500" name="price" id="sample-500">
+                <label class="price__label" for="sample-500">500</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-583">
-                <label class="samples-list__label" for="sample-583">583</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="583" name="price" id="sample-583">
+                <label class="price__label" for="sample-583">583</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-585">
-                <label class="samples-list__label" for="sample-585">585</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="585" name="price" id="sample-585">
+                <label class="price__label" for="sample-585">585</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-585">
-                <label class="samples-list__label" for="sample-585">585</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="750" name="price" id="sample-750"
+                  checked>
+                <label class="price__label" for="sample-750">750</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-750" checked>
-                <label class="samples-list__label" for="sample-750">750</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="900" name="price" id="sample-900">
+                <label class="price__label" for="sample-900">900</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-900">
-                <label class="samples-list__label" for="sample-900">900</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="958" name="price" id="sample-958">
+                <label class="price__label" for="sample-958">958</label>
               </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-958">
-                <label class="samples-list__label" for="sample-958">958</label>
-              </li>
-              <li class="samples-list__item">
-                <input class="samples-list__input" type="radio" name="price" id="sample-999">
-                <label class="samples-list__label" for="sample-999">999</label>
+              <li class="price__sample-item">
+                <input class="price__input visually-hidden" type="radio" data-value="999" name="price" id="sample-999">
+                <label class="price__label" for="sample-999">999</label>
               </li>
             </ul>
-          </div>
 
-          <div>
-            <p class="price__title">Сумма на руки:</p>
-
+            <p class="price__sub-title price__sub-title--sum">Сумма на руки:</p>
             <p class="price__amount-on-hand">2 460 ₽</p>
           </div>
         </div>
@@ -105,7 +100,7 @@
           <h2 class="charoit__title section__title">Ломбард «Чароит» — скупка золотых колец в Пензе</h2>
           <p class="charoit__text section__text">Хотите продать золотое кольцо дорого? Купим изделие по вашей цене!</p>
 
-          <a class="charoit__btn btn" href="#!">Заказать звонок</a>
+          <a class="charoit__btn btn" href="#!" target="_self" data-micromodal-open="modal-1">Заказать звонок</a>
         </div>
       </section>
       <!-- END CHAROIT -->
@@ -294,13 +289,13 @@
             <li class="faq__item card accordion__item">
               <h3 class="faq__item-title card__title accordion__trigger">В ломбард можно сдать обручалку?</h3>
               <div class="accordion__content">
-                <p class="faq__item-desc card__text"></p>
+                <!-- <p class="faq__item-desc card__text"></p> -->
               </div>
             </li>
             <li class="faq__item card accordion__item">
               <h3 class="faq__item-title card__title accordion__trigger">Как выкупить заложенную вещь?</h3>
               <div class="accordion__content">
-                <p class="faq__item-desc card__text"></p>
+                <!-- <p class="faq__item-desc card__text"></p> -->
               </div>
             </li>
           </ul>
@@ -311,87 +306,97 @@
       <!-- FEEDBACK -->
       <section class="feedback section">
         <div class="wrapper">
-          <h2 class="feedback__title section__title">Остались вопросы?</h2>
-          <p class="feedback__text section__text">Оставьте заявку и мы вам перезвоним!</p>
+          <div class="feedback__container">
+            <h2 class="feedback__title section__title">Остались вопросы?</h2>
+            <p class="feedback__text section__text">Оставьте заявку и мы вам перезвоним!</p>
 
-          <form class="feedback__feedback-form feedback-form" action="#" method="POST" id="feedback-from">
-            <div class="feedback-form__input-wrapper">
-              <label class="" for="name">Ваше Имя</label>
-              <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Имя">
+            <form class="feedback__feedback-form feedback-form" action="#" method="POST" id="feedback-from">
+              <div class="feedback-form__input-wrapper">
+                <input class="feedback-form__input" type="text" name="name" id="name">
+                <label class="feedback-form__label" for="name">Имя</label>
+              </div>
+              <div class="feedback-form__input-wrapper">
+                <input class="feedback-form__input" type="tel" name="phone" id="phone">
+                <label class="feedback-form__label" for="phone">Телефон</label>
+              </div>
+              <div class="feedback-form__input-wrapper feedback-form__input-wrapper--message">
+                <textarea class="feedback-form__input feedback-form__input--message" name="message"
+                  id="message"></textarea>
+                <label class="feedback-form__label" for="message">Сообщение</label>
+              </div>
+
+              <div class="feedback-form__privacy">
+                <input class="feedback-form__privacy-input visually-hidden" type="checkbox" name="privacy" id="privacy"
+                  checked>
+                <label class="feedback-form__privacy-label" for="privacy"></label>
+
+                <p class="feedback-form__privacy-text">Отправляя форму, я соглашаюсь <br> на
+                  <a class="feedback-form__privacy-link" href="#!">обработку персональных данных</a>
+                </p>
+              </div>
+
+              <button class="feedback-form__submit btn">Отправить</button>
+            </form>
+
+            <div class="feedback__map">
+              <h2 class="visually-hidden">Как Проехать</h2>
+
             </div>
-            <div class="feedback-form__input-wrapper">
-              <label class="" for="phone">Ваш Телефон</label>
-              <input class="feedback-form__input" type="tel" name="phone" id="phone" placeholder="Телефон">
-            </div>
-            <div class="feedback-form__input-wrapper">
-              <label class="" for="message">Ваше Сообщение</label>
-
-              <textarea name="message" id="message" placeholder="Сообщение"></textarea>
-            </div>
-
-            <div class="feedback-form__privacy">
-              <input class="" type="checkbox" name="privacy" id="privacy">
-              <label for="privacy"></label>
-
-              <p class="feedback-form__privacy-text">Отправляя форму, я соглашаюсь на
-                <a class="feedback-form__privacy-link" href="#!">обработку персональных данных</a>
-              </p>
-            </div>
-
-            <button class="feedback-form__submit btn">Отправить</button>
-          </form>
-
-          <div class="feedback__map">
-            <h2 class="">Как Проехать</h2>
-
           </div>
         </div>
       </section>
       <!-- END FEEDBACK -->
-
-      <section class="contacts section">
-        <a class="contacts__link" href="tel:+7412258861">+7 (8412) 258-861</a>
-        <a class="contacts__link" href="#!">Адреса ломбардов</a>
-      </section>
-
     </main>
+    <footer class="footer section">
+      <div class="wrapper">
+        <a class="footer__link footer__link--phone" href="tel:+7412258861">+7 (8412) 258-861</a>
+        <a class="footer__link footer__link--address" href="#!">Адреса ломбардов</a>
 
-    <footer class="footer">
-      <a class="footer__link" href="#!">
-        <span class=""></span>
+        <a class="footer__copyright" href="https://onlinebees.ru/" target="_blank" title="Веб-студия Onlinebees">
+          <svg class="footer__copyright-icon" width="126" height="24" viewBox="0 0 126 24">
+            <use xlink:href="#icon-onlinebees"></use>
+          </svg>
+        </a>
 
-      </a>
+        <a class="footer__logo" href="#!" target="_blank" title="на главную">
+          <picture>
 
-      <a class="footer__link" href="#!">
-
-      </a>
+            <img src="./common.blocks/footer/logo.png" srcset="${require('./common.blocks/footer/logo@2x.png')} 2x"
+              width="208" height="32" alt="Логоти ломбарда «Чароит»">
+          </picture>
+        </a>
+      </div>
     </footer>
 
-    <div class="modal" id="modal-1" aria-hidden="true">
+
+    <div class="modal modal--slide section" id="modal-1" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
           <button class="modal__close" aria-label="Закрыть окно" data-micromodal-close></button>
-          <h2 class="modal__title" id="modal-1-title">Оставьте Вопросы?</h2>
-          <form class="modal__feedback-form feedback-form" action="#" method="POST" id="feedback-from">
-            <div class="feedback-form__input-wrapper">
-              <label class="" for="name">Ваше Имя</label>
-              <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Имя">
-            </div>
-            <div class="feedback-form__input-wrapper">
-              <label class="" for="phone">Ваш Телефон</label>
-              <input class="feedback-form__input" type="tel" name="phone" id="phone" placeholder="Телефон">
-            </div>
-            <div class="feedback-form__input-wrapper">
-              <label class="" for="message">Ваше Сообщение</label>
+          <h2 class="modal__title section__title">Остались вопросы?</h2>
+          <p class="modal__text section__text">Оставьте заявку и мы вам перезвоним!</p>
 
-              <textarea name="message" id="message" placeholder="Сообщение"></textarea>
+          <form class="modal__feedback-form feedback-form" action="#" method="POST" id="modal-from">
+            <div class="feedback-form__input-wrapper">
+              <input class="feedback-form__input" type="text" name="name" id="modal-name">
+              <label class="feedback-form__label" for="modal-name">Имя</label>
+            </div>
+            <div class="feedback-form__input-wrapper">
+              <input class="feedback-form__input" type="tel" name="phone" id="modal-phone">
+              <label class="feedback-form__label" for="modal-phone">Телефон</label>
+            </div>
+            <div class="feedback-form__input-wrapper feedback-form__input-wrapper--message">
+              <textarea class="feedback-form__input feedback-form__input--message" name="message"
+                id="modal-message"></textarea>
+              <label class="feedback-form__label" for="modal-message">Сообщение</label>
             </div>
 
             <div class="feedback-form__privacy">
-              <input class="" type="checkbox" name="privacy" id="privacy">
-              <label for="privacy"></label>
+              <input class="feedback-form__privacy-input visually-hidden" type="checkbox" name="privacy"
+                id="modal-privacy" checked>
+              <label class="feedback-form__privacy-label" for="modal-privacy"></label>
 
-              <p class="feedback-form__privacy-text">Отправляя форму, я соглашаюсь на
+              <p class="feedback-form__privacy-text">Отправляя форму, я соглашаюсь <br> на
                 <a class="feedback-form__privacy-link" href="#!">обработку персональных данных</a>
               </p>
             </div>
@@ -401,6 +406,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </body>
 

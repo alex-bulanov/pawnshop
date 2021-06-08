@@ -1,11 +1,33 @@
-.feedback {
+@import (reference) '../../less/variables.less';
 
+.feedback {
+  padding-bottom: 32px;
+ 
+  &__container {
+    border-bottom: 1px solid @color-border;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__feedback-form {
+    margin-bottom: 40px;
+  }
+
+  &__map {
+    min-height: 410px;
+    margin-bottom: 31px;
+    background: no-repeat url("./map-bg.jpg") center / cover;
+  
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('./map-bg@2x.jpg');
+    }
+  }
 }
 
 .feedback .feedback__title {
   margin: 0 auto 7px;
   text-align: left;
   letter-spacing: normal;
-
-  outline: 1px solid red;
 }

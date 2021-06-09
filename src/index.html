@@ -223,7 +223,8 @@
                 Приходите сейчас!
               </p>
 
-              <a class="advantages__item-btn btn btn--small" href="#!">Адреса ломбардов</a>
+              <a class="advantages__item-btn btn btn--small" href="#!" data-micromodal-open="modal-2">Адреса
+                ломбардов</a>
             </li>
           </ul>
         </div>
@@ -352,7 +353,7 @@
     <footer class="footer section">
       <div class="wrapper">
         <a class="footer__link footer__link--phone" href="tel:+7412258861">+7 (8412) 258-861</a>
-        <a class="footer__link footer__link--address" href="#!">Адреса ломбардов</a>
+        <a class="footer__link footer__link--address" href="#!" data-micromodal-open="modal-2">Адреса ломбардов</a>
 
         <a class="footer__copyright" href="https://onlinebees.ru/" target="_blank" title="Веб-студия Onlinebees">
           <svg class="footer__copyright-icon" width="126" height="24" viewBox="0 0 126 24">
@@ -370,11 +371,11 @@
       </div>
     </footer>
 
-
+    <!-- MODAL FEEDBACK -->
     <div class="modal modal--slide section" id="modal-1" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <button class="modal__close" aria-label="Закрыть окно" data-micromodal-close></button>
+          <button class="modal__close btn-cross" aria-label="Закрыть окно" data-micromodal-close></button>
           <h2 class="modal__title section__title">Остались вопросы?</h2>
           <p class="modal__text section__text">Оставьте заявку и мы вам перезвоним!</p>
 
@@ -408,7 +409,78 @@
         </div>
       </div>
     </div>
+    <!-- END MODAL FEEDBACK -->
 
+    <!-- MODAL MAPS -->
+    <div class="modal modal--slide modal--map section" id="modal-2" aria-hidden="true">
+
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+          <button class="modal__close btn-cross" aria-label="Закрыть окно" data-micromodal-close></button>
+          <!-- <h2 class="modal__title section__title"></h2> -->
+
+          <div class="slider">
+            <div class="slider__wrapper">
+              <!-- card 1 -->
+              <div class="slider__slide">
+                <div class="slider__card card">
+                  <h3 class="slider__card-title card__title">ул. Кирова, 70</h3>
+                  <a class="slider__card-text card__text" href="tel:+78412251345">тел: +7 (8412) 251-345</a>
+                  <p class="slider__card-text card__text"><span>пн-сб: 9:15–19:15</span> <span>вс: 9:15–14:45</span>
+                  </p>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="slider__slide">
+                <div class="slider__card card">
+                  <h3 class="slider__card-title card__title">ул. Кирова, 69</h3>
+                  <a class="slider__card-text card__text" href="tel:+78412258861">тел: +7 (8412) 258-861</a>
+                  <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:45</span> <span>вс: 9:00–14:45</span>
+                  </p>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="slider__slide">
+                <div class="slider__card card">
+                  <h3 class="slider__card-title card__title">ул. пр-кт Строителей, 21а</h3>
+                  <a class="slider__card-text card__text" href="tel:+78412774867">тел: +7 (8412) 774-867</a>
+                  <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:30</span> <span>вс: 9:00–14:30</span>
+                  </p>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="slider__slide">
+                <div class="slider__card card">
+                  <h3 class="slider__card-title card__title">ул. Кирова, 73</h3>
+                  <a class="slider__card-text card__text" href="tel:+78412250542">тел: +7 (8412) 250-542</a>
+                  <p class="slider__card-text card__text"><span>пн-сб: 9:15–18:45</span> <span>вс: 9:15–17:45</span>
+                  </p>
+                </div>
+              </div>
+              <!-- card 5 -->
+              <div class="slider__slide">
+                <div class="slider__card card">
+                  <h3 class="slider__card-title card__title">ул. Луначарского, 4</h3>
+                  <a class="slider__card-text card__text" href="tel:+78412492070">тел: +7 (8412) 492-070</a>
+                  <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:45</span> <span>вс: 9:00–15:45</span>
+                  </p>
+                </div>
+              </div>
+              <!-- card 6 -->
+              <div class="slider__slide">
+                <div class="slider__card card">
+                  <h3 class="slider__card-title card__title">ул. пр-кт Победы, 31</h3>
+                  <a class="slider__card-text card__text" href="tel:+78412517222">тел: +7 (8412) 517-222</a>
+                  <p class="slider__card-text card__text"><span>пн-сб: 9:00–19:45</span> <span>вс: 9:00–14:45</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL MAPS -->
   </div>
 </body>
 

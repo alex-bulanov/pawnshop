@@ -1,0 +1,30 @@
+@import (reference) '../../less/variables.less';
+
+.btn-cross {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  appearance: none;
+  background-color: @color-white;
+  appearance: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    background-color: @color-secondary-text;
+    transform: translate(-50%, 0) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, 0) rotate(-45deg);
+  }
+}

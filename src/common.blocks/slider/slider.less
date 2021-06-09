@@ -1,0 +1,29 @@
+.slider {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  &__card {
+    width: 254px;
+    padding: 16px;
+  }
+
+  &__card-title {
+    margin-bottom: 8px;
+  }
+
+  &__card-text {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

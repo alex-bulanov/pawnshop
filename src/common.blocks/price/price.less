@@ -24,11 +24,67 @@
     }
   }
 
-  &__range {
+  &__range-wrapper {
     height: 48px;
     margin-bottom: 16px;
-    background-color: pink;
+    padding-top: 22px;
   }
+
+  &__range {
+    border: 1px solid @color-border;
+    border-radius: 6px;
+    height: 16px;
+    padding: 1px;
+    background-color: transparent;
+    box-shadow: none;
+
+    .noUi-connect {
+      border-radius: 4px;
+      background: rgba(@color-btn, 0.2);
+      left: -14px;
+    }
+
+    .noUi-handle {
+      top: -24px;
+      left: 4px;
+      border: none;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      box-shadow: none;
+      background-color: transparent;
+      background: no-repeat transparent url("./kettlebell.png") center / 26px 40px;
+      z-index: 10;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url('./kettlebell@2x.png');
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      .noUi-tooltip {
+        top: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        width: 22px;
+        height: 24px;
+        padding: 0;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+        color: @color-accent;
+        background-color: @color-white;
+        box-shadow: none;
+        z-index: 8;
+      }
+    }
+  }
+
 
   &__samples-list {
     display: flex;
@@ -64,7 +120,6 @@
   }
 
   &__amount-on-hand {
-
     font-size: 24px;
     line-height: 26px;
     letter-spacing: 1px;

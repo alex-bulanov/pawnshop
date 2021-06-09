@@ -26,7 +26,9 @@
     "babel-polyfill": "^6.26.0",
     "micromodal": "^0.4.6",
     "normalize.css": "^8.0.0",
-    "vue": "^2.5.16"
+    "nouislider": "^15.1.1",
+    "vue": "^2.5.16",
+    "wnumb": "^1.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",

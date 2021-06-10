@@ -1,0 +1,157 @@
+@import (reference) '../../less/variables.less';
+
+.menu {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  border-radius: 8px;
+  width: calc(100% - 32px);
+  height: 64px;
+  background-color: @color-white;
+  box-shadow: 0px 20px 24px rgba(17, 17, 17, 0.06);
+  transition: all 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  z-index: 50;
+
+  &__open {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+    z-index: 5;
+    outline: none;
+
+    span,
+    &::before,
+    &::after {
+      width: 75%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: @color-secondary-text;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      top: calc(50% - 9px);
+    }
+
+    &::after {
+      bottom: calc(50% - 9px);
+    }
+  } 
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: none;
+  }
+
+  &__body {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+
+  &__body-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 175px 16px 110px;
+  }
+
+  &__nav-list {
+    border-bottom: 1px solid @color-border;
+    margin-bottom: 32px;
+    padding-bottom: 29px;
+  }
+
+  &__nav-item {
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 1px;
+
+    &--sub {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: normal;
+      color: @color-secondary-text;
+    }
+
+    &--current {
+      font-size: 18px;
+      color: @color-text;
+    }
+  }
+
+  &__nav-sub-list {
+    margin-bottom: 32px;
+  }
+
+  &__nav-sub-list  &__nav-item {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-sub-list &__nav-item--current {
+    margin-bottom: 15px;
+  }
+
+  &__privacy {
+    font-size: 16px;
+    line-height: 22px;
+    color: @color-secondary-text;
+  }
+}
+
+.menu--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  z-index: 70;
+  overflow: hidden;
+}
+
+.menu--active .menu__body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color: @color-white;
+  z-index: 100;
+  visibility: visible;
+  overflow: auto;
+}
+
+.menu--active .menu__close {
+  display: block;
+}

@@ -11,17 +11,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    background: rgba(0,0,0,0.6);
     z-index: 10000;
   }
 
   &__container {
     position: relative;
     border-radius: 12px 12px 0 0;
-    width: 360px;
+    width: 100%;
     padding: 40px 16px 32px;
     background-color: @color-white;
   }
@@ -43,11 +43,14 @@
   &--map &__container {
     display: flex;
     align-items: flex-end;
-    width: 360px;
     border-radius: 0;
     min-height: 640px;
     padding: 40px 0 32px 16px;
     background: no-repeat @color-white url("./modal-map.jpg") center / cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url('./modal-map@2x.jpg');
+    }
   }
 
   &--map &__close {

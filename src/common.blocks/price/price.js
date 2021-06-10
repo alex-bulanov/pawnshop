@@ -1,7 +1,17 @@
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 import wNumb from 'wnumb';
-import COST_GOLD from '../../static/cost-of-gold.json';
+
+const COST_OF_GOLD = {
+  375: 1580,
+  500: 2100,
+  583: 2590,
+  585: 2590,
+  750: 3150,
+  900: 3780,
+  958: 4020,
+  999: 4200,
+};
 
 const priceAmountOnHand = document.querySelector('.price__amount-on-hand');
 const priceSamplesList = document.querySelector('.price__samples-list');
@@ -25,13 +35,13 @@ function renderAmount() {
 
 priceInputs.forEach((input) => {
   if (input.checked) {
-    rate = COST_GOLD[input.dataset.value];
+    rate = COST_OF_GOLD[input.dataset.value];
   }
 });
 
 priceSamplesList.addEventListener('click', (event) => {
   if (event.target.nodeName === 'INPUT') {
-    rate = COST_GOLD[event.target.dataset.value];
+    rate = COST_OF_GOLD[event.target.dataset.value];
     renderAmount();
   }
 });

@@ -23,10 +23,82 @@
   <div class="holder">
     <!-- header -->
     <header class="header">
-      <div class=""></div>
+      <!-- <div class="header__wrapper"> -->
       <a class="header__logo" href="#!">
-
+        <picture>
+          <img class="header__logo-img" src="./common.blocks/header/header-logo.png"
+            srcset="${require('./common.blocks/header/header-logo@2x.png')} 2x" width="207" height="32"
+            alt="Логоти ломбарда «Чароит»">
+        </picture>
       </a>
+
+      <div class="header__menu menu">
+        <button class="menu__open" type="button" aria-label="Открыть меню">
+          <span></span>
+        </button>
+
+        <div class="menu__body">
+          <div class="menu__body-wrapper">
+            <button class="menu__close btn-cross" aria-label="Закрыть меню"></button>
+
+            <nav class="menu__nav">
+              <ul class="menu__nav-list list-reset">
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#!">Украшения</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#!">Кольца</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#!">Цепочки</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#!">Изделия из бриллианта</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#!">Стоматологическое золото</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link" href="#!">Залог</a>
+                </li>
+              </ul>
+
+              <ul class="menu__nav-sub-list list-reset">
+                <li class="menu__nav-item menu__nav-item--current">
+                  <a class="menu__nav-link menu__nav-link--sub menu__nav-link--current" href="#!">Чароит</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">О нас</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Отзывы</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Акции</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Статьи</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Вопрос-ответ</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Сертификаты</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Информация</a>
+                </li>
+                <li class="menu__nav-item">
+                  <a class="menu__nav-link menu__nav-link--sub" href="#!">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <a class="menu__privacy" href="#!">Политика обработки персональных данных</a>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
     </header>
 
     <main>

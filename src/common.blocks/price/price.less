@@ -5,9 +5,11 @@
 
   &__container {
     border-radius: 12px;
+    max-width: 552px;
+    margin: 0 auto;
     padding: 70px 24px 23px;
     background-color: @color-white;
-    box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.06);
+    box-shadow: @shadow;
   }
 
   &__title {
@@ -122,5 +124,109 @@
     font-weight: bold;
     text-align: center;
     color: @color-accent;
+  }
+}
+
+@media (min-width: @desktop-medium) {
+
+  .price {
+    position: relative;
+    padding-bottom: 324px;
+
+    &__container {
+      position: absolute;
+      top: -330px;
+      left: 50%;
+      max-width: 992px;
+      width: 992px;
+      padding: 56px 56px 63px;
+      transform: translateX(-50%);
+    }
+
+    &__title {
+      display: block;
+      margin: 0 auto 25px;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    &__sub-title {
+      margin-bottom: 23px;
+      font-size: 24px;
+      line-height: 34px;
+      
+      &:first-of-type {
+        margin-left: -26px;
+      }
+
+      &--sum {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+
+    &__range-wrapper { 
+      margin-bottom: 49px;
+      padding-top: 34px;
+    }
+
+    &__range {
+
+      .noUi-connect {
+        border-radius: 4px;
+        background: rgba(@color-btn, 0.2);
+        left: -24px;
+      }
+
+      .noUi-handle {
+        top: -37px;
+        width: 72px;
+        height: 72px;
+        transform: translateX(14px);
+        background: no-repeat transparent url("./kettlebell-desktop.png") center / 38px 59px;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url('./kettlebell-desktop@2x.png');
+        }
+
+        .noUi-tooltip {
+          top: 30px;
+          width: 33px;
+          height: 30px;
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &__samples-list {
+      max-width: 100%;
+      gap: 21.71px;
+      margin: 0 auto 41px;
+      padding: 0;
+    }
+
+    &__sample-item {
+      width: 91px;
+      height: 44px;
+    }
+      
+    &__label {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__sum-wrapper {
+      display: flex;
+      padding-left: 285px;
+      align-items: center;
+    }
+
+    &__amount-on-hand {
+      font-size: 48px;
+      line-height: 53px;
+    }
   }
 }

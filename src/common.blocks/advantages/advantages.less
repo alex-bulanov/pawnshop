@@ -3,39 +3,78 @@
 .advantages {
   padding-bottom: 57px;
 
-  &__title {
-    margin: 0 auto 15px;
-  }
-
-  &__text {
+  &__text-container {
     margin: 0 auto 32px;
     text-align: center;
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+  &__title {
+    margin: 0 auto 15px;
   }
 
-  &__item {
-    width: 100%;
+  &__card {
+    max-width: 368px;
     min-height: 170px;
+    margin: 0 auto 24px;
+  
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
-  &__item-title {
+  &__card-title {
     margin: 0 auto 8px;
-
   }
 
-  &__item-desc {
+  &__card-desc {
     margin: 0 auto;
-
   }
 
-  &__item-btn {
+  &__card-btn {
     width: 189px;
     margin-top: 16px;
+  }
+}
+
+@media (min-width: @desktop-medium) {
+  .advantages {
+    padding-bottom: 120px;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 38px 48px;
+      align-items: stretch;
+    }
+
+    &__text-container {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      margin: 0 auto 25px;
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__card {
+      min-height: 257px;
+      margin-bottom: 0;
+    }
+
+    &__card-title {
+      margin: 0 auto 16px;
+    }
+
+    &__card-btn {
+      width: 208px;
+      margin-top: 24px;
+    }
+  }
+
+  .advantages .advantages__title {
+    text-align: left;
   }
 }

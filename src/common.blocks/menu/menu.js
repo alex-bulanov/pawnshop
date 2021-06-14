@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const ESC_KEYCODE = 27;
 
 const body = document.querySelector('body');
@@ -18,6 +20,7 @@ function onEscPress(evt) {
 }
 
 function hideMenu() {
+  menuBody.scrollTop = 0;
   menu.classList.remove('menu--active');
   body.classList.remove('lock');
   document.removeEventListener('keydown', onEscPress);

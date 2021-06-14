@@ -12,13 +12,13 @@
   &__trigger {
     position: relative;
     margin: 0 auto;
-    padding-right: 40px;
+    padding-right: 24px;
     cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
+      top: calc(50% - 2px);
       right: 6px;
       width: 12px;
       height: 12px;
@@ -32,21 +32,32 @@
 
   &__item--show &__trigger {
     &::after {
-      content: "";
-      position: absolute;
-      top: calc(50% + 3px);
-      right: 6px;
-      width: 12px;
-      height: 12px;
-      border: 1px solid;
-      border-left-color: transparent;
-      border-bottom-color: transparent;
-      transform: translateY(-50%) rotate(-45deg);
+      transform: rotate(-45deg);
     }
   }
 
   &__item--show &__content {
     max-height: 100%;
     visibility: visible;
+  }
+}
+
+@media (min-width: @desktop-medium) { 
+
+  .accordion {
+
+    &__trigger {
+      position: relative;
+      margin: 0 auto;
+      padding-right: 40px;
+      cursor: pointer;
+
+      &::after {
+        top: calc(50% - 5px);
+        right: 8px;
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 }

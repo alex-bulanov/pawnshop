@@ -1,6 +1,9 @@
+@import (reference) '../../less/variables.less';
+
 .slider {
   display: block;
   max-width: 100%;
+  padding: 0 0 32px 16px;
   overflow: hidden;
 
   &__wrapper {
@@ -28,6 +31,18 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-medium) {
+
+  .slider {
+    padding: 0 0 40px 40px;
+
+    &__card {
+      width: 352px;
+      padding: 24px;
     }
   }
 }

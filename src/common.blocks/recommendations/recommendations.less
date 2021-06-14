@@ -1,3 +1,5 @@
+@import (reference) '../../less/variables.less';
+
 .recommendations {
   padding-bottom: 57px;
 
@@ -17,4 +19,35 @@
 .recommendations .recommendations__title {
   margin: 0 auto 15px;
   letter-spacing: normal;
+}
+
+@media (min-width: @desktop-medium)  {
+  .recommendations {
+    padding-bottom: 120px;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 459px 1fr;
+      gap: 0 62px;
+    }
+
+    &__title {
+      grid-column: 1;
+    }
+
+    &__text {
+      grid-column: 2;
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      grid-column: 2;
+      margin-left: 11px;
+    }
+  }
+
+  .recommendations .recommendations__title {
+    text-align: left;
+    letter-spacing: normal;
+  }
 }

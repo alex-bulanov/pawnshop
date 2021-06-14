@@ -1,3 +1,5 @@
+@import (reference) '../../less/variables.less';
+
 .section {
 
   &__title {
@@ -12,5 +14,20 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 140%;
+  }
+}
+
+@media (min-width: @desktop-medium) {
+
+  .section {
+    &__title {
+      font-size: 48px;
+      line-height: 53px;
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
 }

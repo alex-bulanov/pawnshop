@@ -16,6 +16,7 @@
   }
 
   &__map {
+    position: relative;
     min-height: 410px;
     margin-bottom: 31px;
     background: no-repeat url("./map-bg.jpg") center / cover;
@@ -30,4 +31,50 @@
   margin: 0 auto 7px;
   text-align: left;
   letter-spacing: normal;
+}
+
+@media (min-width: @desktop-medium) {
+
+  .feedback {
+    padding-bottom: 30px;
+
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 48px;
+      border-bottom: none;
+    }
+
+    &__text {
+      margin-bottom: 23px;
+    }
+
+    &__wrapper {
+      flex-grow: 1;
+      max-width: 472px;
+    }
+
+    
+    &__feedback-form {
+      margin-bottom: 0;
+    }
+
+    &__map { 
+      flex-grow: 1;
+      max-width: 680px;
+      min-height: 599px;
+      margin-bottom: 0;
+      background: no-repeat url("./map-bg-desktop.jpg") center / cover;
+  
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url('./map-bg-desktop@2x.jpg');
+      }
+    }
+  }
+
+  .feedback .feedback__title {
+    margin-bottom: 25px;
+  }
 }

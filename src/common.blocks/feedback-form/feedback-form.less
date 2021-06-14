@@ -6,7 +6,7 @@
     position: relative;
     display: flex;
     margin-bottom: 16px;
-
+    
     &--message {
       &::after {
         content: "";
@@ -35,6 +35,7 @@
   }
 
   &__input {
+    display: block;
     border: 2px solid transparent;
     border-radius: 10px;
     width: 100%;
@@ -53,6 +54,7 @@
       resize: none;
       height: 112px;
       padding: 20px 24px;
+      overflow: auto;
     }
 
     &:hover,
@@ -85,10 +87,12 @@
     position: absolute;
     top: 14px;
     left: 24px;
+    width: calc(100% - 48px);
     font-size: 14px;
     line-height: 20px;
     color: @color-secondary-text;
     transition: @transition;
+    background: @color-bg-input;
   }
 
   &__input--message + &__label {
@@ -97,18 +101,19 @@
 
   &__input:focus + &__label,
   &__input--filled + &__label {
-    top: 4px;
+    top: 3px;
     font-size: 12px;
     line-height: 18px;
   }
 
   &__input--message&__input:focus + &__label,
   &__input--message&__input--filled + &__label {
-    top: 6px;
+    top: 4px;
   }
 
   &__input:disabled + &__label {
     color: @color-disabled-text;
+    background: @color-disabled;
   }
 
   &__input--success {
@@ -123,6 +128,7 @@
 
   &__input--success + &__label {
     color: @color-success;
+    background-color: @color-bg-success;
   }
 
   &__input--error {
@@ -137,6 +143,7 @@
 
   &__input--error + &__label {
     color: @color-error;
+    background-color: @color-bg-error;
   }
 
   &__privacy {
@@ -186,5 +193,61 @@
 
   &__submit {
     width: 100%;
+    max-width: 427px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-medium) { 
+
+  .feedback-form {
+
+    &__input-wrapper {
+      margin-bottom: 24px;
+    }
+
+    &__input {
+      height: 56px;
+      font-size: 20px;
+      line-height: 28px;
+
+      &--message {
+        height: 128px;
+        padding: 36px 24px 20px;
+      }
+    }
+
+    &__label {
+      top: 14px;
+      left: 24px;
+      font-size: 20px;
+      line-height: 28px;
+      z-index: 10;
+    }
+
+    &__input:focus + &__label,
+    &__input--filled + &__label {
+      top: 6px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  
+    &__input--message&__input:focus + &__label,
+    &__input--message&__input--filled + &__label {
+      top: 20px;
+    }
+
+    &__privacy {
+      margin-bottom: 40px;
+    }
+
+    &__privacy-text {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+      &__submit {
+      max-width: 100%;
+    }
   }
 }

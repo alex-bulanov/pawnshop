@@ -1,0 +1,39 @@
+@import (reference) '../../less/variables.less';
+
+.btn-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  z-index: 5;
+  outline: none;
+
+  span,
+  &::before,
+  &::after {
+    width: 75%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: @color-secondary-text;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    top: calc(50% - 9px);
+  }
+
+  &::after {
+    bottom: calc(50% - 9px);
+  }
+}

@@ -1,12 +1,41 @@
+@import (reference) '../../less/variables.less';
+
 .charoit {
   padding-bottom: 57px;
 
   &__title {
+    max-width: 328px;
     margin: 0 auto 15px;
   }
 
   &__text {
     margin: 0 auto 32px;
     text-align: center;
+  }
+
+  &__btn {
+    max-width: 427px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-medium) {
+  .charoit {
+    padding-bottom: 120px;
+
+    &__title {
+      max-width: 784px;
+      margin: 0 auto 24px;
+    }
+
+    &__text {
+      width: 575px;
+      margin: 0 auto 39px;
+    }
+
+    &__btn {
+      width: 264px;
+      margin: 0 auto;
+    }
   }
 }

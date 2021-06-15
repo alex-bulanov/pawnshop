@@ -5,6 +5,7 @@
   &__input-wrapper {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 16px;
     
     &--message {
@@ -32,6 +33,21 @@
         transform: rotate(-45deg);     
       }
     }
+  }
+
+  &__input-wrapper.has-error > div, 
+  &__input-wrapper.has-success > div {
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+  &__input-wrapper.has-success > div {
+    color: @color-success;
+  }
+
+  &__input-wrapper.has-error > div {
+    color: @color-error;
   }
 
   &__input {
@@ -116,7 +132,7 @@
     background: @color-disabled;
   }
 
-  &__input--success {
+  &__input-wrapper.has-success > &__input {
     border-color: @color-success;
     background: @color-bg-success;
 
@@ -126,12 +142,12 @@
     }
   }
 
-  &__input--success + &__label {
+  &__input-wrapper.has-success > &__label {
     color: @color-success;
     background-color: @color-bg-success;
   }
 
-  &__input--error {
+  &__input-wrapper.has-error > &__input {
     border-color: @color-error;
     background: @color-bg-error;
 
@@ -141,7 +157,7 @@
     }
   }
 
-  &__input--error + &__label {
+  &__input-wrapper.has-error > &__label {
     color: @color-error;
     background-color: @color-bg-error;
   }
@@ -222,7 +238,6 @@
       left: 24px;
       font-size: 20px;
       line-height: 28px;
-      // z-index: 10;
     }
 
     &__input:focus + &__label,
@@ -234,8 +249,8 @@
   
     &__input--message&__input:focus + &__label,
     &__input--message&__input--filled + &__label {
-      padding-top: 18px;
       top: 2px;
+      padding-top: 18px;
     }
 
     &__privacy {

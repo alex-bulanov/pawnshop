@@ -1,9 +1,10 @@
-const navArrows = document.querySelectorAll('.footer__nav-arrow');
+const footerNavLinks = document.querySelectorAll('.footer__nav-link');
 
-if (navArrows.length > 0) {
-  navArrows.forEach((arrow) => {
-    arrow.addEventListener('click', () => {
-      arrow.parentElement.classList.toggle('footer__nav-item--active');
-    });
+footerNavLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (event.target.classList.contains('footer__nav-link--arrow')) {
+      event.preventDefault();
+      link.parentElement.classList.toggle('footer__nav-item--active');
+    }
   });
-}
+});

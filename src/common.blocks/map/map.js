@@ -1,45 +1,20 @@
 const DESTOP__WIDTH = 1140;
-
-const CHAROIT_DATA = [
-  {
-    name: 'ул. Кирова, 70',
-    сoordinates: [53.198262, 45.020301],
-    opening: 'пн-сб: 9:15–19:15 <br> вс: 9:15–14:45',
-    phone: '<a href="tel:+78412251345">тел: +7 (8412) 251-345</a>',
-  },
-  {
-    name: 'ул. Кирова, 73',
-    сoordinates: [53.198154, 45.021379],
-    opening: 'пн-сб: 9:15–18:45 <br> вс: 9:15–17:45',
-    phone: '<a href="tel:+78412250542">тел: +7 (8412) 250-542</a>',
-  },
-  {
-    name: 'ул. Кирова, 69',
-    сoordinates: [53.196471, 45.020463],
-    opening: 'пн-сб: 9:00–18:45 <br> вс: 9:00–14:45',
-    phone: '<a href="tel:+78412258861">тел: +7 (8412) 258-861</a>',
-  },
-  {
-    name: 'ул. пр-кт Строителей, 21а',
-    сoordinates: [53.223711, 44.925062],
-    opening: 'пн-сб: 9:00–18:30 <br> вс: 9:00–14:30',
-    phone: '<a href="tel:+78412774867">тел: +7 (8412) 774-867</a>',
-  },
-  {
-    name: 'ул. Луначарского, 4',
-    сoordinates: [53.205835, 45.009423],
-    opening: 'пн-сб: 9:00–18:45 <br> вс: 9:00–15:45',
-    phone: '<a href="tel:+78412492070">тел: +7 (8412) 492-070</a>',
-  },
-  {
-    name: 'ул. пр-кт Победы, 31',
-    сoordinates: [53.217187, 44.981000],
-    opening: 'пн-сб: 9:00–19:45 <br> вс: 9:00–14:45',
-    phone: '<a href="tel:+78412517222">тел: +7 (8412) 517-222</a>',
-  },
-];
-
+const mapData = document.querySelector('.map__data');
 const charoitMaps = document.querySelectorAll('.map');
+const mapDataItem = mapData.querySelectorAll('.map__item');
+const charoitData = [];
+
+mapDataItem.forEach((item) => {
+  const currentPinData = {};
+  currentPinData.сoordinates = [];
+  currentPinData.name = item.querySelector('.map__marker-title').textContent;
+  currentPinData.сoordinates.push(Number(item.querySelector('.map__marker').dataset.x));
+  currentPinData.сoordinates.push(Number(item.querySelector('.map__marker').dataset.y));
+  currentPinData.opening = item.querySelector('.map__marker-opening').textContent;
+  currentPinData.phone = item.querySelector('.map__marker-phone').textContent.replace('тел: ', '');
+  charoitData.push(currentPinData);
+});
+
 
 function loadMaps() {
   try {
@@ -60,12 +35,11 @@ function loadMaps() {
             top: '48px',
           });
         }
-
-        CHAROIT_DATA.forEach((data) => {
+        charoitData.forEach((data) => {
           const pin = [data.сoordinates, {
             balloonContentHeader: data.name,
             balloonContentBody: data.opening,
-            balloonContentFooter: data.phone,
+            balloonContentFooter: `<a href="tel:${data.phone}">тел: ${data.phone}</a>`,
             hintContent: data.name,
           }];
 

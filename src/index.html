@@ -15,6 +15,7 @@
   <link rel="preload" href="fonts/Ubuntu-Regular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Ubuntu-Bold.woff" as="font" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>s
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ebbe0f87-4545-4d85-9f47-cff0cf4de2bf&lang=ru_RU"></script>
 
   <title>Ломбард «Чароит»</title>
@@ -458,14 +459,15 @@
               <p class="feedback__text section__text">Оставьте заявку и мы вам перезвоним!</p>
 
               <form class="feedback__feedback-form feedback-form" action="#" method="POST" id="feedback-from">
-                <div class="feedback-form__input-wrapper">
+                <div class="feedback-form__input-wrapper has-error">
                   <input class="feedback-form__input" type="text" name="name" id="name">
                   <label class="feedback-form__label" for="name">Имя</label>
-
+                  <div>Uh oh! There was an error!</div>
                 </div>
-                <div class="feedback-form__input-wrapper">
+                <div class="feedback-form__input-wrapper has-success">
                   <input class="feedback-form__input" type="tel" name="phone" id="phone">
                   <label class="feedback-form__label" for="phone">Телефон</label>
+                  <div>Success message!</div>
                 </div>
                 <div class="feedback-form__input-wrapper feedback-form__input-wrapper--message">
                   <textarea class="feedback-form__input feedback-form__input--message" name="message"
@@ -622,7 +624,7 @@
             <div class="slider__wrapper">
               <!-- card 1 -->
               <div class="slider__slide">
-                <div class="slider__card card">
+                <div class="slider__card card js-map" data-value="address-1">
                   <h3 class="slider__card-title card__title">ул. Кирова, 70</h3>
                   <a class="slider__card-text card__text" href="tel:+78412251345">тел: +7 (8412) 251-345</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:15–19:15</span> <span>вс: 9:15–14:45</span>
@@ -631,7 +633,7 @@
               </div>
               <!-- card 2 -->
               <div class="slider__slide">
-                <div class="slider__card card">
+                <div class="slider__card card js-map" data-value="address-2">
                   <h3 class="slider__card-title card__title">ул. Кирова, 69</h3>
                   <a class="slider__card-text card__text" href="tel:+78412258861">тел: +7 (8412) 258-861</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:45</span> <span>вс: 9:00–14:45</span>
@@ -640,7 +642,7 @@
               </div>
               <!-- card 3 -->
               <div class="slider__slide">
-                <div class="slider__card card">
+                <div class="slider__card card js-map" data-value="address-3">
                   <h3 class="slider__card-title card__title">ул. пр-кт Строителей, 21а</h3>
                   <a class="slider__card-text card__text" href="tel:+78412774867">тел: +7 (8412) 774-867</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:30</span> <span>вс: 9:00–14:30</span>
@@ -649,7 +651,7 @@
               </div>
               <!-- card 4 -->
               <div class="slider__slide">
-                <div class="slider__card card">
+                <div class="slider__card card js-map" data-value="address-4">
                   <h3 class="slider__card-title card__title">ул. Кирова, 73</h3>
                   <a class="slider__card-text card__text" href="tel:+78412250542">тел: +7 (8412) 250-542</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:15–18:45</span> <span>вс: 9:15–17:45</span>
@@ -658,7 +660,7 @@
               </div>
               <!-- card 5 -->
               <div class="slider__slide">
-                <div class="slider__card card">
+                <div class="slider__card card js-map" data-value="address-5">
                   <h3 class="slider__card-title card__title">ул. Луначарского, 4</h3>
                   <a class="slider__card-text card__text" href="tel:+78412492070">тел: +7 (8412) 492-070</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:45</span> <span>вс: 9:00–15:45</span>
@@ -667,7 +669,7 @@
               </div>
               <!-- card 6 -->
               <div class="slider__slide">
-                <div class="slider__card card">
+                <div class="slider__card card js-map" data-value="address-6">
                   <h3 class="slider__card-title card__title">ул. пр-кт Победы, 31</h3>
                   <a class="slider__card-text card__text" href="tel:+78412517222">тел: +7 (8412) 517-222</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–19:45</span> <span>вс: 9:00–14:45</span>

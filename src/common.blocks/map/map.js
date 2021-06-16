@@ -35,11 +35,12 @@ function loadMaps() {
             top: '48px',
           });
         }
+
         charoitData.forEach((data) => {
           const pin = [data.сoordinates, {
             balloonContentHeader: data.name,
             balloonContentBody: data.opening,
-            balloonContentFooter: `<a href="tel:${data.phone}">тел: ${data.phone}</a>`,
+            balloonContentFooter: `<a class="pin" href="tel:${data.phone}">тел: ${data.phone}</a>`,
             hintContent: data.name,
           }];
 
@@ -54,3 +55,4 @@ function loadMaps() {
 }
 
 document.addEventListener('DOMContentLoaded', loadMaps);
+

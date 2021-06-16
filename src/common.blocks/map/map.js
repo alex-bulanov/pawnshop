@@ -3,6 +3,8 @@ const mapData = document.querySelector('.map__data');
 const charoitMaps = document.querySelectorAll('.map');
 const mapDataItem = mapData.querySelectorAll('.map__item');
 const charoitData = [];
+const sliderCards = document.querySelectorAll('.js-map');
+const markerCoortds = [];
 
 mapDataItem.forEach((item) => {
   const currentPinData = {};
@@ -13,8 +15,8 @@ mapDataItem.forEach((item) => {
   currentPinData.opening = item.querySelector('.map__marker-opening').textContent;
   currentPinData.phone = item.querySelector('.map__marker-phone').textContent.replace('тел: ', '');
   charoitData.push(currentPinData);
+  markerCoortds.push(currentPinData.сoordinates);
 });
-
 
 function loadMaps() {
   try {
@@ -49,6 +51,22 @@ function loadMaps() {
           markersCollection.add(new ymaps.Placemark(...pin));
           currentMap.geoObjects.add(markersCollection);
         });
+
+        if (charoitMap.id === 'map-slider') {
+          sliderCards.forEach((item) => {
+            item.addEventListener('click', (event) => {
+              if (event.target.parentNode.classList.contains('js-map')) {
+                const currentItem = event.target.parentNode;
+                const index = currentItem.dataset.value.replace('address-', '');
+                const coords = markerCoortds[index];
+
+                currentMap.panTo(coords, {
+                  flying: 1,
+                }).then(() => markersCollection.get(index).balloon.open(coords));
+              }
+            });
+          });
+        }
       });
     });
   } catch (error) {

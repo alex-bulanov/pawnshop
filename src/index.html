@@ -619,12 +619,69 @@
       <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container">
           <button class="modal__close btn-cross" aria-label="Закрыть окно" data-micromodal-close></button>
-          ${require('./common.blocks/map/map.html')}
+          <div class="map" id="map-slider">
+            <ul class="map__data">
+              <!-- 1 -->
+              <li class="map__item">
+                <div class="map__marker" data-x="53.198262" data-y="45.020301" data-value="marker-0"></div>
+                <div class="map__marker-data">
+                  <h3 class="map__marker-title">ул. Кирова, 70</h3>
+                  <p class="map__marker-opening">пн-сб: 9:15–19:15 <br> вс: 9:15–14:45</p>
+                  <a class="map__marker-phone" href="tel:+78412251345">тел: +7 (8412) 251-345</a>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li class="map__item">
+                <div class="map__marker" data-x="53.198154" data-y="45.021379" data-value="marker-1"></div>
+                <div class="map__marker-data">
+                  <h3 class="map__marker-title">ул. Кирова, 73</h3>
+                  <p class="map__marker-opening">пн-сб: 9:15–18:45 <br> вс: 9:15–17:45</p>
+                  <a class="map__marker-phone" href="tel:+78412250542">тел: +7 (8412) 250-542</a>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li class="map__item">
+                <div class="map__marker" data-x="53.196471" data-y="45.020463" data-value="marker-2"></div>
+                <div class="map__marker-data">
+                  <h3 class="map__marker-title">ул. Кирова, 69</h3>
+                  <p class="map__marker-opening">пн-сб: 9:00–18:45 <br> вс: 9:00–14:45</p>
+                  <a class="map__marker-phone" href="tel:+78412258861">тел: +7 (8412) 258-861</a>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li class="map__item">
+                <div class="map__marker" data-x="53.22371" data-y="44.925062" data-value="marker-3"></div>
+                <div class="map__marker-data">
+                  <h3 class="map__marker-title">ул. пр-кт Строителей, 21а</h3>
+                  <p class="map__marker-opening">пн-сб: 9:00–18:30 <br> вс: 9:00–14:30</p>
+                  <a class="map__marker-phone" href="tel:+78412774867">тел: +7 (8412) 774-867</a>
+                </div>
+              </li>
+              <!-- 5 -->
+              <li class="map__item">
+                <div class="map__marker" data-x="53.205835" data-y="45.009423" data-value="marker-4"></div>
+                <div class="map__marker-data">
+                  <h3 class="map__marker-title">ул. Луначарского, 4</h3>
+                  <p class="map__marker-opening">пн-сб: 9:00–18:45 <br> вс: 9:00–15:45</p>
+                  <a class="map__marker-phone" href="tel:+78412492070">тел: +7 (8412) 492-070</a>
+                </div>
+              </li>
+              <!-- 6 -->
+              <li class="map__item">
+                <div class="map__marker" data-x="53.217187" data-y="44.981000" data-value="marker-5"></div>
+                <div class="map__marker-data">
+                  <h3 class="map__marker-title">ул. пр-кт Победы, 31</h3>
+                  <p class="map__marker-opening">пн-сб: 9:00–19:45 <br> вс: 9:00–14:45</p>
+                  <a class="map__marker-phone" href="tel:+78412517222">тел: +7 (8412) 517-222</a>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div class="slider">
             <div class="slider__wrapper">
               <!-- card 1 -->
               <div class="slider__slide">
-                <div class="slider__card card js-map" data-value="address-1">
+                <div class="slider__card card js-map" data-value="address-0">
                   <h3 class="slider__card-title card__title">ул. Кирова, 70</h3>
                   <a class="slider__card-text card__text" href="tel:+78412251345">тел: +7 (8412) 251-345</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:15–19:15</span> <span>вс: 9:15–14:45</span>
@@ -633,7 +690,7 @@
               </div>
               <!-- card 2 -->
               <div class="slider__slide">
-                <div class="slider__card card js-map" data-value="address-2">
+                <div class="slider__card card js-map" data-value="address-1">
                   <h3 class="slider__card-title card__title">ул. Кирова, 69</h3>
                   <a class="slider__card-text card__text" href="tel:+78412258861">тел: +7 (8412) 258-861</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:45</span> <span>вс: 9:00–14:45</span>
@@ -642,7 +699,7 @@
               </div>
               <!-- card 3 -->
               <div class="slider__slide">
-                <div class="slider__card card js-map" data-value="address-3">
+                <div class="slider__card card js-map" data-value="address-2">
                   <h3 class="slider__card-title card__title">ул. пр-кт Строителей, 21а</h3>
                   <a class="slider__card-text card__text" href="tel:+78412774867">тел: +7 (8412) 774-867</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:30</span> <span>вс: 9:00–14:30</span>
@@ -651,7 +708,7 @@
               </div>
               <!-- card 4 -->
               <div class="slider__slide">
-                <div class="slider__card card js-map" data-value="address-4">
+                <div class="slider__card card js-map" data-value="address-3">
                   <h3 class="slider__card-title card__title">ул. Кирова, 73</h3>
                   <a class="slider__card-text card__text" href="tel:+78412250542">тел: +7 (8412) 250-542</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:15–18:45</span> <span>вс: 9:15–17:45</span>
@@ -660,7 +717,7 @@
               </div>
               <!-- card 5 -->
               <div class="slider__slide">
-                <div class="slider__card card js-map" data-value="address-5">
+                <div class="slider__card card js-map" data-value="address-4">
                   <h3 class="slider__card-title card__title">ул. Луначарского, 4</h3>
                   <a class="slider__card-text card__text" href="tel:+78412492070">тел: +7 (8412) 492-070</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–18:45</span> <span>вс: 9:00–15:45</span>
@@ -669,7 +726,7 @@
               </div>
               <!-- card 6 -->
               <div class="slider__slide">
-                <div class="slider__card card js-map" data-value="address-6">
+                <div class="slider__card card js-map" data-value="address-5">
                   <h3 class="slider__card-title card__title">ул. пр-кт Победы, 31</h3>
                   <a class="slider__card-text card__text" href="tel:+78412517222">тел: +7 (8412) 517-222</a>
                   <p class="slider__card-text card__text"><span>пн-сб: 9:00–19:45</span> <span>вс: 9:00–14:45</span>

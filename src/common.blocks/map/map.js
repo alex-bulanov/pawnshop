@@ -36,6 +36,8 @@ function loadMaps() {
           });
         }
 
+        const markersCollection = new ymaps.GeoObjectCollection(null);
+
         charoitData.forEach((data) => {
           const pin = [data.сoordinates, {
             balloonContentHeader: data.name,
@@ -44,8 +46,8 @@ function loadMaps() {
             hintContent: data.name,
           }];
 
-          const charoitPlacemark = new ymaps.Placemark(...pin);
-          currentMap.geoObjects.add(charoitPlacemark);
+          markersCollection.add(new ymaps.Placemark(...pin));
+          currentMap.geoObjects.add(markersCollection);
         });
       });
     });
@@ -53,6 +55,7 @@ function loadMaps() {
     console.error('Something went wrong', error);
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', loadMaps);
 

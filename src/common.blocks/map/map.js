@@ -1,11 +1,9 @@
-
 const DESTOP__WIDTH = 1140;
 const mapData = document.querySelector('.map__data');
 const charoitMaps = document.querySelectorAll('.map');
 const mapDataItem = mapData.querySelectorAll('.map__item');
 const charoitData = [];
 const sliderCards = document.querySelectorAll('.js-map');
-
 const markerCoortds = [];
 
 mapDataItem.forEach((item) => {
@@ -19,9 +17,6 @@ mapDataItem.forEach((item) => {
   charoitData.push(currentPinData);
   markerCoortds.push(currentPinData.сoordinates);
 });
-
-
-console.log(markerCoortds);
 
 function loadMaps() {
   try {
